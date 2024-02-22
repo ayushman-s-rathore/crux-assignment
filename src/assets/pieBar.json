@@ -1,0 +1,30 @@
+{
+    "data":[
+        {
+         "productName": "A",
+         "sale": 30000,
+         "color": "#FF5733"
+        },
+        {
+            "productName": "B",
+            "sale": 45000,
+            "color": "#33FF57"
+        },
+        {
+            "productName": "C",
+            "sale": 20000,
+            "color": "#5733FF"
+        },
+        {
+            "productName": "D",
+            "sale": 50000,
+            "color": "#33A8FF"
+        },
+        {
+            "productName": "E",
+            "sale": 28000,
+            "color": "#FFC0CB"
+        }
+
+    ]
+}

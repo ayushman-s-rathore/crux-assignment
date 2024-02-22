@@ -1,0 +1,29 @@
+{
+    "products":[
+        {
+            "productName": "Product A",
+            "monthlySales": [120, 150, 180, 90, 200, 250, 300, 170, 130, 110, 160, 190],
+            "color": "#82D1DB"
+          },
+          {
+            "productName": "Product B",
+            "monthlySales": [90, 120, 100, 80, 150, 200, 230, 120, 110, 80, 130, 170],
+            "color": "#5FDC8F"
+          },
+          {
+            "productName": "Product C",
+            "monthlySales": [200, 180, 160, 140, 120, 100, 80, 60, 40, 20, 10, 30],
+            "color": "#FF8E8E"
+          },
+          {
+            "productName": "Product D",
+            "monthlySales": [120, 100, 90, 80, 70, 60, 50, 40, 30, 20, 10, 0],
+            "color": "#5E5ADB"
+          },
+          {
+            "productName": "Product E",
+            "monthlySales": [80, 100, 120, 150, 180, 200, 220, 250, 280, 300, 280, 250],
+            "color": "#F0AB24"
+          }
+    ]
+}

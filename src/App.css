@@ -1,0 +1,17 @@
+body{
+  background-color:  #F4F4FF;
+  margin: 0;
+  padding: 0;
+  font-style: Inter;
+  overflow-x: hidden;
+
+  
+}
+.app{
+  display: flex;
+}
+.dashboard{
+  flex: 1;
+  margin-left: 4rem;
+}
+

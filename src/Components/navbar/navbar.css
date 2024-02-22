@@ -1,0 +1,88 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 96vw;
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  height: 3rem;
+}
+.start {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.start svg {
+  margin-left: 1.2rem;
+  margin-right: 0.7rem;
+}
+.tabs {
+  margin-left: 0.5rem;
+  border: 1px solid #f3f2fc;
+  width: 7.3rem;
+  padding: 0.5rem 0rem 0.5rem 1rem;
+  border-radius: 0.625rem;
+  color: #8d8d8d;
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.selected {
+  margin-left: 0.5rem;
+  width: 7.3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem 0rem 0.5rem 1rem;
+  border-radius: 0.625rem;
+  border: 1px solid #e0dff8;
+  background: #f7f6fd;
+  color: var(--Crux, #5e5adb);
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.adder {
+  border-radius: var(--radius-rounded-lg, 0.5rem);
+    border: 1px solid rgba(94, 90, 219, 0.15);
+  background: rgba(94, 90, 219, 0.05);
+  padding: 0.4rem 0.5rem 0.4rem 0.5rem;
+  margin-left: 0.5rem;
+}
+.adder svg{
+    margin: 0;
+}
+.end{
+    margin-right: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 100%;
+}
+.widget{
+    margin-left: 0.5rem;
+    height: 80%;
+    width: 7.5rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+   
+    border-radius: 0.625rem;
+    border: 1px solid #e0dff8;
+    background: #f7f6fd;
+    color: var(--Crux, #5e5adb);
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+  
+}
+.widget svg{
+ padding: 0rem 0.3rem 0.3rem 0.3rem;
+
+}
