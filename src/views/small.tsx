@@ -9,15 +9,17 @@ const Small = (prop: any) => {
   ];
   
   let black: boolean= false;
+  const styling = prop.prop
+  console.log(styling)
   if(prop.prop.backgroundColor==="#282828")black=true;
   if(prop.back==="#282828"){
     black=true;
-    prop.prop.backgroundColor=prop.back;
+    styling.backgroundColor="#282828"
   }
   return (
     <>
       <div 
-        style={prop.prop}              
+        style={styling}              
       >
         
         <Box

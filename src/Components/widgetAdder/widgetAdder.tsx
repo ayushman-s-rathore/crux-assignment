@@ -34,13 +34,22 @@ const WidgetAdder: React.FC<TProps> = ({getClose}) => {
     borderRadius: "1rem",
     border: "1px solid #E6E6E6",
   };
+  const style2 = {
+    minWidth: "11.5rem",
+    height: "11.5rem",
+    maxWidth: '13rem',
+    backgroundColor: "#282828",
+    borderRadius: "1rem",
+    border: "1px solid #E6E6E6",
+  };
   const handleSave=()=>{
     const component = (
       (pie && <SmallGraph graphStyle1={graphStyle1} pie={pie} bar={bar} line={line}/>)||
       (bar && <SmallGraph graphStyle1={graphStyle1} pie={pie} bar={bar} line={line}/>)||
       (line && <SmallGraph graphStyle1={graphStyle1} pie={pie} bar={bar} line={line}/>)||
       (summaryBox && <Textbox width={"20rem"} back={chooseColor}/>)||
-      ( (dataBox && chooseColor!=='#5E5ADB') && <Small prop={style} back={chooseColor}/>)||
+      ( (dataBox && chooseColor!=='#FFF') && <Small prop={style} />)||
+      ( (dataBox && chooseColor!=='#282828') && <Small prop={style2} />)||
       ((dataBox && chooseColor==='#5E5ADB') && <Small2></Small2>)
     )
     setAddedWidget([...addedWidget,component]);
@@ -286,7 +295,10 @@ const WidgetAdder: React.FC<TProps> = ({getClose}) => {
                 
                 sx={{
                   flexDirection: "row",
-                  gap: "0.5rem",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "5rem",
+                  width: "10rem",
                   marginTop: "10%",
                   display: "flex",
                 }}
@@ -297,7 +309,8 @@ const WidgetAdder: React.FC<TProps> = ({getClose}) => {
                   height={"1.5rem"}
                   width={"1.5rem"}
                   bgcolor={"#282828"}
-                  border={chooseColor==='#282828'?"4px solid #D3D2F5":""}
+                  margin={"0.2rem 0.3rem"}
+                  border={chooseColor==='#282828'?"4px solid #D3D2F5":"4px solid #F8F8FF"}
                   borderRadius={"50%"}
                   sx={{
                     cursor: "pointer",
@@ -308,7 +321,8 @@ const WidgetAdder: React.FC<TProps> = ({getClose}) => {
                   height={"1.5rem"}
                   width={"1.5rem"}
                   bgcolor={"#FFF"}
-                  border={chooseColor==='#FFF'?"4px solid #D3D2F5":""}
+                  margin={"0.2rem 0.3rem"}
+                  border={chooseColor==='#FFF'?"4px solid #D3D2F5":"4px solid #F8F8FF"}
                   borderRadius={"50%"}
                   sx={{
                     cursor: "pointer",
@@ -320,7 +334,8 @@ const WidgetAdder: React.FC<TProps> = ({getClose}) => {
                   height={"1.5rem"}
                   width={"1.5rem"}
                   bgcolor={"#5E5ADB"}
-                  border={chooseColor==='#5E5ADB'?"4px solid #D3D2F5":""}
+                  margin={"0.2rem 0.3rem"}
+                  border={chooseColor==='#5E5ADB'?"4px solid #D3D2F5":"4px solid #F8F8FF"}
                   borderRadius={"50%"}
                   sx={{
                     cursor: "pointer",
