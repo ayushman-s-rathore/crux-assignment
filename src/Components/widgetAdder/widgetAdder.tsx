@@ -48,8 +48,8 @@ const WidgetAdder: React.FC<TProps> = ({getClose}) => {
       (bar && <SmallGraph graphStyle1={graphStyle1} pie={pie} bar={bar} line={line}/>)||
       (line && <SmallGraph graphStyle1={graphStyle1} pie={pie} bar={bar} line={line}/>)||
       (summaryBox && <Textbox width={"20rem"} back={chooseColor}/>)||
-      ( (dataBox && chooseColor!=='#FFF') && <Small prop={style} />)||
-      ( (dataBox && chooseColor!=='#282828') && <Small prop={style2} />)||
+      ( (dataBox && chooseColor==='#FFF') && <Small prop={style} />)||
+      ( (dataBox && chooseColor==='#282828') && <Small prop={style2} />)||
       ((dataBox && chooseColor==='#5E5ADB') && <Small2></Small2>)
     )
     setAddedWidget([...addedWidget,component]);
