@@ -11,15 +11,18 @@ import SmallGraph from "../../views/smallGraph";
 import { DashboardContext } from "../../hooks/context";
 import Small2 from "../../views/small2";
 
-const WidgetAdder = () => {
-    const [close, setClose] = useState(true)
-    const [boxSelect, setBoxSelect] = useState(0);
-    const [dataBox, setDataBox] =useState(true)
-    const [summaryBox, setSummaryBox]=useState(false);
-    const [chooseColor, setChooseColor] = useState('#FFF');
-    const[pie, setPie] =useState(false);
-    const[bar, setBar] =useState(false);
-    const[line, setLine] =useState(false);
+interface TProps {
+  getClose: ()=> void
+}
+const WidgetAdder: React.FC<TProps> = ({getClose}) => {
+    const [close, setClose] = useState<boolean>(true)
+    const [boxSelect, setBoxSelect] = useState<number>(1);
+    const [dataBox, setDataBox] =useState<boolean>(true)
+    const [summaryBox, setSummaryBox]=useState<boolean>(false);
+    const [chooseColor, setChooseColor] = useState<string>('#FFF');
+    const[pie, setPie] =useState<boolean>(false);
+    const[bar, setBar] =useState<boolean>(false);
+    const[line, setLine] =useState<boolean>(false);
 
     const [addedWidget, setAddedWidget]= useContext(DashboardContext) || [[],null];
     // console.log(boxSelect);
@@ -42,6 +45,7 @@ const WidgetAdder = () => {
     )
     setAddedWidget([...addedWidget,component]);
     setClose(false);
+    getClose()
   }
  
   const handleBoxSelect=(x:number)=>{
@@ -80,7 +84,10 @@ const WidgetAdder = () => {
         }}
         
       >
-        <ClickAwayListener  onClickAway={()=>setClose(false) }>
+        <ClickAwayListener  onClickAway={()=>{
+          setClose(false)
+          getClose()
+        } }>
         <Box
           sx={{
             backgroundColor: "#FFF",
@@ -203,7 +210,8 @@ const WidgetAdder = () => {
                   fill: "#414141",
               
                 }}
-                onClick={()=> setClose(false)}
+                onClick={()=> {getClose()
+                  setClose(false)}}
               />
               <Box
                 sx={{
@@ -300,7 +308,7 @@ const WidgetAdder = () => {
                   height={"1.5rem"}
                   width={"1.5rem"}
                   bgcolor={"#FFF"}
-                  border={chooseColor==='white'?"4px solid #D3D2F5":""}
+                  border={chooseColor==='#FFF'?"4px solid #D3D2F5":""}
                   borderRadius={"50%"}
                   sx={{
                     cursor: "pointer",
@@ -483,7 +491,8 @@ const WidgetAdder = () => {
                     fontFamily: 'Inter',
                     width: '30%',
                 }}
-                onClick={()=> setClose(false)}>cancel</Button>
+                onClick={()=>{ getClose()
+                setClose(false)}}>cancel</Button>
                 <Button variant="contained" sx={{
                     marginLeft: '2rem',
                     backgroundColor: '#5e5adb',

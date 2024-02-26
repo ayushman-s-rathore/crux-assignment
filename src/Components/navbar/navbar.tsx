@@ -1,18 +1,22 @@
-import { useState } from "react";
+import {  useState } from "react";
 import "./navbar.css";
 import WidgetAdder from "../widgetAdder/widgetAdder";
 import ClearIcon from "@mui/icons-material/Clear";
 
 function Navbar() {
   const [isPopUpOpen, setPopUpOpen] = useState(false);
+  
 
   const handleChange =() =>{
+    setPopUpOpen(!isPopUpOpen);
+  }
+  const getClose =()=>{
     setPopUpOpen(!isPopUpOpen);
   }
 
   return (
     <>
-      {isPopUpOpen && <WidgetAdder/>}
+      {isPopUpOpen && <WidgetAdder getClose={getClose}/>}
       <div className="navbar">
         <div className="start">
           <svg
@@ -69,7 +73,9 @@ function Navbar() {
           </div>
         </div>
         <div className="end">
-          <div className="widget" onClick={handleChange}>
+          <div className="widget" 
+          
+          onClick={handleChange}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"

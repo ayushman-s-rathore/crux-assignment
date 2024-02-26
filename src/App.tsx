@@ -6,7 +6,7 @@ import {  DashboardProvider } from './hooks/context'
 
 
 
-function App() {
+const App: React.FC =()=>{
 
 
   
